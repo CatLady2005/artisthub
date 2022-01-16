@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johannes Vemeer</title>
+    <link rel="icon" href="painter.png" type="image/x-icon">
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+         *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins';
+            margin: 0;
+            z-index: -1;
+        }
+        .header{
+            padding: 30px;
+            text-align: center;
+            font-family: 'Poppins';
+            background-image: url('https://theculturetrip.com/wp-content/uploads/2016/01/1043px-Jan_Vermeer_van_Delft_-_The_Glass_of_Wine_-_Google_Art_Project.jpg');
+            color: rgb(255, 255, 255);
+        }
+        .header h1{
+            font-size: 40px;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: black;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0%;
+            z-index: 2;
+        }
+        .navbar a{
+            float: left;
+            display: block;
+            font-family: 'Poppins';
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a.right{
+            float: right;
+            font-family: 'Poppins';
+        }
+        .navbar a:hover{
+            background-color: deeppink;
+            color: white;
+        }
+        .vemeer{
+            padding: 20px;
+            background-color: white;
+            margin: 10px;
+            display: inline-flexbox;
+            font-family: 'Poppins';
+        }
+        .vemeer h2{
+            font-family: 'Poppins';
+        }
+        .img1{
+            float: left;
+            border: none;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .img2{
+            float: right;
+            border: none;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        .button{
+            text-decoration: none;
+            padding: 5px;
+            text-align: justify;
+        }
+        .btn a{
+            text-decoration: none;
+            color: white;
+        }
+        .btn{
+            border: none;
+            border-radius: 10px;
+            font-size: medium;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            background-color: black;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .btn:hover{
+            background-color: deeppink;
+        }
+        .btn a:hover{
+            color: black;
+        }
+        .vemeer2{
+            display: inline-block;
+            justify-content: space-between; 
+            position: relative;
+        }
+        .image_overlay{
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 2px;
+            width: 99%;
+            height: 99%;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgb(0,0, 0, 0.6);
+            color: white;
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-family: 'Poppins';
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay:hover{
+            opacity: 1;
+        }
+        .image_overlay > * {
+            transform: translateY(15px);
+            transition: transform 0.25s;
+        }
+        .image_overlay:hover > * {
+            transform: translateY(0);
+        }
+
+        .image_title{
+            font-size: large;
+            margin-bottom: 0px;
+            margin-left: 5px;
+        }
+        .image_description{
+            margin-top: 0px;
+            margin-left: 2px;
+            margin-bottom: 0%;
+        }
+
+        .img3{
+            float: right;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .img4{
+            float: right;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .img5{
+            float: left;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .vemeer3{
+            display: inline-block;
+            justify-content: space-between; 
+        }
+        .img6{
+            float: left;
+            border-radius: 10px;
+            padding: 10px; 
+        }
+        .img7{
+            float: left;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .img8{
+            float: left;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .vemeer3{
+            display: inline-block;
+            justify-content: space-between; 
+            position: relative;
+        }
+        .image_overlay2{
+            position: absolute; 
+            left: 15px;
+            right: 20px;
+            bottom: 0;
+            padding: 20px;
+            text-align: left;
+            width: 349px;
+            height: 299px;
+            border-radius: 10px;
+            background: rgb(0,0, 0, 0.6);
+            color: white;
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-family: 'Poppins';
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay2:hover{
+            opacity: 1;
+        }
+        .image_overlay2 > * {
+            transform: translateY(10px);
+            transition: transform 0.25s;
+        }
+        .image_overlay2:hover > * {
+            transform: translateY(0);
+        }
+
+        .image_title2{
+            font-size: large;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        .image_description2{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-bottom: 0%;
+        }
+
+        .vemeer4{
+            display: inline-block;
+            justify-content: space-between; 
+            position: relative;
+        }
+        .image_overlay3{
+            position: absolute; 
+            left: 1px;
+            right: 20px;
+            bottom: 0;
+            padding: 20px;
+            text-align: left;
+            width: 349px;
+            height: 299px;
+            border-radius: 10px;
+            background: rgb(0,0, 0, 0.6);
+            color: white;
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-family: 'Poppins';
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay3:hover{
+            opacity: 1;
+        }
+        .image_overlay3 > * {
+            transform: translateY(10px);
+            transition: transform 0.25s;
+        }
+        .image_overlay3:hover > * {
+            transform: translateY(0);
+        }
+
+        .image_title3{
+            font-size: large;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        .image_description3{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-bottom: 0%;
+        }
+        .vemeer5{
+            display: inline-block;
+            justify-content: space-between; 
+            position: relative;
+        }
+        .image_overlay4{
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 2px;
+            width: 99%;
+            height: 99%;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgb(0,0, 0, 0.6);
+            color: white;
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-family: 'Poppins';
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay4:hover{
+            opacity: 1;
+        }
+        .image_overlay4 > * {
+            transform: translateY(15px);
+            transition: transform 0.25s;
+        }
+        .image_overlay4:hover > * {
+            transform: translateY(0);
+        }
+
+        .image_title4{
+            font-size: large;
+            margin-bottom: 0px;
+            margin-left: 5px;
+        }
+        .image_description4{
+            margin-top: 0px;
+            margin-left: 2px;
+            margin-bottom: 0%;
+        }
+        .vemeer6{
+            display: inline-block;
+            justify-content: space-between; 
+            position: relative;
+        }
+        .image_overlay5{
+            position: absolute; 
+            left: 15px;
+            right: 20px;
+            bottom: 0;
+            padding: 20px;
+            text-align: left;
+            width: 349px;
+            height: 299px;
+            border-radius: 10px;
+            background: rgb(0,0, 0, 0.6);
+            color: white;
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-family: 'Poppins';
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay5:hover{
+            opacity: 1;
+        }
+        .image_overlay5 > * {
+            transform: translateY(10px);
+            transition: transform 0.25s;
+        }
+        .image_overlay5:hover > * {
+            transform: translateY(0);
+        }
+
+        .image_title5{
+            font-size: large;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        .image_description5{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-bottom: 0%;
+        }
+        .vemeer7{
+            display: inline-block;
+            justify-content: space-between;
+            position: relative; 
+        }
+        .image_overlay6{
+            position: absolute; 
+            left: 1px;
+            right: 20px;
+            bottom: 0;
+            padding: 20px;
+            text-align: left;
+            width: 349px;
+            height: 299px;
+            border-radius: 10px;
+            background: rgb(0,0, 0, 0.6);
+            color: white;
+            display: flex;
+            align-items: right;
+            justify-content: flex-end;
+            flex-direction: column;
+            font-family: 'Poppins';
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .image_overlay6:hover{
+            opacity: 1;
+        }
+        .image_overlay6 > * {
+            transform: translateY(10px);
+            transition: transform 0.25s;
+        }
+        .image_overlay6:hover > * {
+            transform: translateY(0);
+        }
+
+        .image_title6{
+            font-size: large;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        .image_description6{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-bottom: 0%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><b>Johannes Vemeer</b></h1>
+        <div style="background-image: url('https://theculturetrip.com/wp-content/uploads/2016/01/1043px-Jan_Vermeer_van_Delft_-_The_Glass_of_Wine_-_Google_Art_Project.jpg');"></div>
+    </div>
+    <div class="navbar">
+        <a href= "homepage.html" class="active">Home</a>
+        <a href="#">Artists</a>
+        <a href="#">Gallery</a>
+        <a href="#">link</a>
+        <a href="login.html" class="right">Login</a>
+    </div>
+    <div class="vemeer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg/300px-Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg" alt="Johannes Vemeer" style="height: 400px; width: 300px; padding: 5px;" class="img1" HSPACE="20" VSPACE="0">
+        <img src="https://cdn.britannica.com/33/194733-050-4CF75F31/Girl-with-a-Pearl-Earring-canvas-Johannes-1665.jpg" alt="pearl" style="height: 400px; width: 300px; padding: 5px;" class="img2" HSPACE="20">
+        <h2>Johannes Vemeer</h2>
+        <p><b>
+            Johannes Vemeer was a Dutch Baroque Period painter who specialized <br> in domestic interior scenes of middle-class life. During his lifetime, <br> he was a moderately successful provincial genre painter, <br> recognized in Delft and The Hague.
+        </b></p>
+        <p><b>
+            Although only about 36 of his paintings survive, <br> these rare works are among the greatest treasures in the world’s finest museums. <br> Vermeer began his career in the early 1650s.
+        </b></p>
+        <div class="button">
+            <button class="btn">
+             <a href="https://en.wikipedia.org/wiki/Johannes_Vermeer"><b>More Info!</b></a>
+            </button>
+        </div>
+        <h3><b>
+            Born: October 1632, Delft, Netherlands <br>
+            Died: December 1675, Delft, Netherlands
+        </b></h3><br>
+        <h3>
+           <b> Some Of His Famous paintings are:</b>
+        </h3>
+        <div class="vemeer2">
+            <img src="https://theculturetrip.com/wp-content/uploads/2016/01/1043px-Jan_Vermeer_van_Delft_-_The_Glass_of_Wine_-_Google_Art_Project.jpg" alt="Wine" style="height: 300px; width: 400px; padding: 2px;" class="img3" >
+            <div class="image_overlay">
+                <div class="image_title">
+                    <b>The Glass Of Wine </b>
+                    <p class="image_description">Year: 1660</p>
+                </div>
+            </div>
+            </div>
+            <div class="vemeer3">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Johannes_Vermeer_-_Girl_Reading_a_Letter_by_an_Open_Window_-_Google_Art_Project.jpg" alt="letter" style="height: 300px; width: 350px; padding: 2px;" class="img4" HSPACE="15" VSPACE="0">
+            <div class="image_overlay2">
+                <div class="image_title2">
+                    <b>Girl reading a Letter at an Open Window</b>
+                    <p class="image_description2">Year: 1659</p>
+                </div>
+            </div>
+            </div>
+            <div class="vemeer4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg/1200px-Johannes_Vermeer_-_Woman_Holding_a_Balance_-_Google_Art_Project.jpg" alt="Balance"  style="height: 300px; width: 350px; padding: 2px;" class="img5" >
+            <div class="image_overlay3">
+                <div class="image_title3"><b>Woman Holding A Balance</b>
+                 <p class="image_description3">Year: 1663</p>
+                </div>
+            </div>
+            </div> <br><br>
+            <div class="vemeer5">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg/450px-Jan_Vermeer_-_The_Art_of_Painting_-_Google_Art_Project.jpg" alt="Art of Painting"  style="height: 300px; width: 400px; padding: 2px;" class="img6">
+                <div class="image_overlay4">
+                    <div class="image_title4"><b>The Art of Painting</b>
+                        <p class="image_description4">Year: 1668</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vemeer6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg/450px-Johannes_%28Jan%29_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg" alt="Jesus, Martha and Mary" style="height: 300px; width: 350px; padding: 2px" class="img7" HSPACE="15">
+                <div class="image_overlay5">
+                    <div class="image_title5"><b>Christ in the House of Martha and Mary</b>
+                       <p class="image_description5">Year: 1655</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vemeer7">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Vermeer_-_Girl_with_a_Red_Hat.JPG/450px-Vermeer_-_Girl_with_a_Red_Hat.JPG" alt="Girl With Red Hat" style="height: 300px; width: 350px; padding: 2px;" class="img8">
+                <div class="image_overlay6">
+                    <div class="image_title6"><b>Girl with a Red Hat</b>
+                       <p class="image_description6">Year: 1666</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

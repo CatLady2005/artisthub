@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link rel="icon" href="painter.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+        }
+        .header{
+            padding: 80px;
+            text-align: left;
+            background-image: url('https://learnodo-newtonic.com/wp-content/uploads/2020/01/Famous-Artists-Featured.jpg');
+            font-family: 'Poppins';
+            color: white;
+        }
+        .header b{
+            color: white;
+        }
+        .header h1{
+            font-size: 40px;
+        }
+        .header p{
+            font-size: larger;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: black;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            z-index: 2;
+        }
+        .navbar a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-family: 'Poppins';
+        }
+        .navbar a.right{
+            float: right;
+        }
+        .navbar a:hover{
+            background-color: deeppink;
+            color: white;
+        }
+        h3{
+            padding: 10px;
+            font-size: x-large;
+            font-family: 'Poppins';
+            text-align: center;
+        }
+        .container{
+            padding: 20px;
+            background-color: white;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 150px;
+            padding-top: 10px;
+            font-family: 'Poppins';
+            justify-content: space-evenly;
+            column-gap: 550px;
+        }
+        
+        .img1{
+            width:300px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            border: solid;
+            color: black;
+        }
+        .img2{
+            width:300px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            border: solid;
+            color: black;
+        }
+        
+        .img3{
+            width:300px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            border: solid;
+            color: black;
+        }
+        
+        .img4{
+            width:300px;
+            height: 300px;
+            border: solid;
+            color: black;
+            border-radius: 10px;
+        }
+        
+        .img5{
+            width: 300px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            border: solid;
+            color: black;
+        }
+        
+        
+        .img6{
+            width: 300px;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+            border: solid;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Great Artists</h1>
+        <p><b><b>Artists who have made a mark in History!</b></b></p>
+        <div style="background-image: url('https://learnodo-newtonic.com/wp-content/uploads/2020/01/Famous-Artists-Featured.jpg');"></div>
+    </div>
+    <div class="navbar">
+        <a href= "homepage.html" class="active">Home</a>
+        <a href="artist.html">Artists</a>
+        <a href="#">Gallery</a>
+        <a href="#">link</a>
+        <a href="login.html" class="right">Login</a>
+    </div>
+    <h3>Meet Famous Artists In History!</h3>
+    <div class="container">
+            <div class="wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGEKd02e-UADD5nLoYdT0_lKmV_Cl24s2HWdQcg3CoPy6KAS-S" alt="Pablo Picasso" class="img1">
+            
+           
+        
+            <img src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTCS0e-ZTVqbESl8pRMUXb2Eda0FdJxPBOhpMLE_QFm0jcoHJbSLnnEqgqyShZg" alt="Leonardo Da Vinci" class="img2">
+           
+        
+            <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQFR6VpPMCxjcvBJfYKHMmksaDvba37uI4rHXn1Ukvpg8hYa9cnE36B5CIwQouZ" alt="Rembrandat" class="img3">
+            </div><br>
+            <div class="wrapper2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Pierre-Auguste_Renoir_112.jpg/1200px-Pierre-Auguste_Renoir_112.jpg" alt="Monet" class="img4">
+            
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg/330px-Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg" alt="Pieter Brugel" class="img5">
+            
+        
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/660px-Raffaello_Sanzio.jpg" alt="raphael" class="img6">
+            </div>
+    </div>
+</body>
+</html>

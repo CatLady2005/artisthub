@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="painter.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: white;
+            margin: 0%;
+        }
+        .header{
+            padding: 80px;
+            text-align: center;
+            background-image: url('Sun_moon.jpg');
+            font-family: 'Poppins';
+            color: black;
+        }
+        .header h1{
+            font-size: 40px;
+        }
+        .header p{
+            font-size: larger;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: black;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+        .navbar a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-family: 'Poppins';
+        }
+        .navbar a.right{
+            float: right;
+        }
+        .navbar a:hover{
+            background-color: deeppink;
+            color: white;
+        }
+        form{
+            line-height: 60px;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Poppins';
+        }
+        h3{
+            text-align: center;
+            color: black;
+            font-family: 'Poppins';
+            padding-top: 50px;
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        input{
+            color: black;
+            size: 40px;
+            font-weight: bolder;
+        }
+        label{
+            font-size: larger;
+            color: deeppink;
+        }
+        .button1{
+            text-align: center;
+            font-family: 'Poppins';
+            padding: 10px;
+        }
+        button{
+            background-color: black;
+            font-weight: bolder;
+            border-radius: 30px;
+            color: whitesmoke;
+            border: none;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Poppins';
+            font-size: 20px;
+        }
+        button:hover{
+            background-color: deeppink;
+            color: black;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Famous Artists In History</h1>
+        <p><b><b>All About Famous Artists Here!</b></b></p>
+        <div style="background-image: url('Sun_moon.jpg');"></div>
+    </div>
+    <div class="navbar">
+        <a href= "homepage.html" class="active">Home</a>
+        <a href="artist.html">Artists</a>
+        <a href="#">Gallery</a>
+        <a href="#">link</a>
+        <a href="#" class="right">Login</a>
+    </div>
+    <div class="h1">
+    <h3>Please Login to access more!</h3></div>
+    <form>
+        <div>
+            <label for="UserName">
+            <b>  UserName:</b>
+          <input type="text" id="UserName" name="UserName" class="UserName" required/>
+          </label>
+        </div>
+        <div>
+          
+        <label for="password">
+            <b> Password:</b>
+             <input type="password" id="password" name="Password" required/>
+         </label>
+        </div>
+        <div>
+            
+        <label for="Email">
+            <b>Email:</b>
+            <input type="email" id="email" name="Email" required/>
+        </label>
+        </div>
+        <div>
+            <label for="birth date">
+                <b>Birth Date:</b>
+                <input type="date" id="birthdate" name="birthdate" required/>
+            </label>
+        </div>
+        <div class="button1">
+        <button type="submit">Register</button>
+        </div>
+    </form>
+</body>
+</html>

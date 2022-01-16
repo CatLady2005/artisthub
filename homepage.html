@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="icon" href="painter.png" type="image/x-icon">
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        .header{
+            padding: 80px;
+            text-align: center;
+            background-image: url('Sun_moon.jpg');
+            font-family: 'Poppins';
+            color: black;
+        }
+        .header h1{
+            font-size: 40px;
+        }
+        .header p{
+            font-size: larger;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: black;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+        .navbar a{
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-family: 'Poppins';
+        }
+        .navbar a.right{
+            float: right;
+        }
+        .navbar a:hover{
+            background-color: deeppink;
+            color: white;
+        }
+        .row{
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            font-family: 'Poppins';
+        }
+        .side{
+            -ms-flex: 30%;
+            flex: 30%;
+            background-color: whitesmoke;
+            padding: 20px;
+        }
+        .main{
+            -ms-flex: 70%;
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+        .Me{
+            border: 10px;
+            border-radius: 500px;
+            border-style: groove;
+            border-color: deeppink;
+        }
+        .left{
+            border: none;
+            border-radius: 50px;
+        }
+        .left:hover{
+            box-shadow: 0 0 5px 3px rgba(245, 4, 117, 0.637);
+        }
+        .center{
+            border: none;
+            border-radius: 50px;
+        }
+        .center:hover{
+            box-shadow: 0 0 5px 3px rgba(245, 4, 117, 0.637);
+        }
+        .right2{
+            border: none;
+            border-radius: 50px;
+        }
+        .right2:hover{
+            box-shadow: 0 0 5px 3px rgba(245, 4, 117, 0.637);
+        }
+        .center2{
+            border: none;
+            border-radius: 15px;
+            padding: 15px;
+        }
+        .center3{
+            border: none;
+            border-radius: 15px;
+            padding: 15px;
+        }
+        .center4{
+            border: 10px;
+            border: none;
+            border-radius: 15px;
+            padding: 15px;
+        }
+        .button{
+            text-decoration: none;
+            padding: 5px;
+        }
+        .btn a{
+            text-decoration: none;
+            color: white;
+        }
+        .btn{
+            border: none;
+            border-radius: 10px;
+            font-size: medium;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            background-color: black;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .btn:hover{
+            background-color: deeppink;
+        }
+        .btn a:hover{
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Famous Artists In History</h1>
+    <p><b><b>All About Famous Artists Here!</b></b></p>
+    <div style="background-image: url('Sun_moon.jpg');"></div>
+</div>
+<div class="navbar">
+    <a href= "homepage.html" class="active">Home</a>
+    <a href="artist.html">Artists</a>
+    <a href="#">Gallery</a>
+    <a href="#">link</a>
+    <a href="login.html" class="right">Login</a>
+</div>
+<div class="row">
+    <div class="side">
+        <h2>About Me !</h2>
+         <div class="img1">
+             <img src="me.jpg" style="height: 300px; width: 300px;" alt="Me" class="Me">
+         </div>
+         <p>Hi! My name is Maria and I'm in 9th grade. I love art and like to drawing and listening to music. I have dedicated this website to all my favourite Artists who made iconic paintings in history</p>
+         <h3>My Favourite Paintings</h3>
+         <p>Click the Paintings to know more about them and who painted them!</p><br>
+         <div>
+         <a href="van_gogh.html" target="_self" class="active">
+            <img src="irises.jpg" style="height: 320px; width: 300px;" alt="Vincent Van Gogh" class="left">
+         </a><br></div><br>
+         <div>
+         <a href="frida_kahlo.html" target="_self">
+                <img src="https://assets.vogue.com/photos/589181cffb0604bf1f5c3924/master/pass/frida-kahlo-self-portrait-painting.jpg" style="height: 320px; width: 300px;" alt="Frida Kahlo" class="center">
+         </a><br></div><br>
+         <div>
+         <a href="vemeer.html">
+                    <img src="https://d32dm0rphc51dk.cloudfront.net/8GwoG1yESI0nmANFD16zqg/large.jpg" style="height: 320px; width: 300px;" alt="Johannes Vemeer" class="right2">
+         </a></div>
+    </div>
+    <div class="main">
+        <h1>My Favourite Artists</h1>
+        <h2>Hokusai</h2>
+        <div class="img5">
+            <img src="https://www.simonsgallery.com/landscapes2/002sf3140greatwave.jpg" style="height: 300px; width: 800px; padding: 5px;" alt="The Grat Wave" class="center2">
+        <p><b>Hokusai was born in Edo, modern-day Tokyo, in 1760. <br>At 18 he entered the Art Studio <br>of Katsukawa Shunsho. He is best known for his book <br> '36 Views of Mount Fuji' and the most <br>famous print 'The Great Wave'</b></p></div>
+        <div class="button">
+            <button class="btn">
+        
+            <a href="https://en.wikipedia.org/wiki/Hokusai"><b>More Info!</b></a>
+            </button>
+       </div>
+        <br>
+        <h2>Michelangelo</h2>
+        <div class="img6">
+            <img src="https://artincontext.org/wp-content/uploads/2021/01/Michelangelo-Pieta-848x530.jpg" style="height: 400px; width: 789px; padding: 5px;" alt="Pieta" class="center3">
+        <p><b>
+            Michelangelo di Lodovico Buonarroti Simoni, known simply as Michelangelo, <br> was an Italian sculptor, painter, architect and poet of the High Renaissance <br>was born in the Republic of Florence, who exerted an unparalleled influence <br> on the development of Western art.
+        </b>
+        </p></div>
+        <div class="button">
+            <button class="btn">
+        
+            <a href="https://en.wikipedia.org/wiki/Michelangelo"><b>More Info!</b></a>
+            </button>
+       </div>
+        <br>
+        <h2>Raja Ravi Varma</h2>
+        <div class="img7">
+            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/shakuntala-patralekhana-raja-ravi-varma.jpg" style="height: 400px; width: 789px; padding: 5px;" alt="Shakuntala" class="center4">
+            <p><b>
+                Raja Ravi Varma was an Indian painter and artist. He is considered among the greatest painters in the history of Indian art. <br> His works are one of the best examples of the fusion of European academic art <br> with a purely Indian sensibility and iconography.
+            </b></p>
+        </div>
+        <div class="button">
+            <button class="btn">
+        
+            <a href="https://en.wikipedia.org/wiki/Raja_Ravi_Varma"><b>More Info!</b></a>
+            </button>
+       </div>
+    </div>
+</div>
+</body>
+</html>
